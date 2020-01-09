@@ -4,6 +4,9 @@ var clear = require('clear')
 const terminalLink = require('terminal-link');
 var Spinner = require('cli-spinner').Spinner;
 const chalk = require('chalk');
+const axios = require('axios')
+
+const package = require('./package.json')
 
 const AFeed = (title, link) => {
     return chalk.green(terminalLink(title, link))
@@ -15,6 +18,13 @@ const Progress = () => {
     spinner.start();
 
     return spinner;
+}
+
+const PrintFeed = (feeds) => {
+    for (feed of feeds) {
+        console.log(`# ${AFeed(feed.title, feed.link)}`)
+        console.log(chalk.cyan(`       -- ${feed.link}`))
+    }
 }
 
 
@@ -29,13 +39,24 @@ figlet('EchoJS', function(err, data) {
     const p1 = Progress()
     Feed.load('http://www.echojs.com/rss', function(err, rss = []) {
         p1.stop()
-        console.log(typeof rss.items)
-        if (rss.items) {
-            for (feed of rss.items) {
-                console.log(`# ${AFeed(feed.title, feed.link)}`)
-                console.log(chalk.cyan(`       -- ${feed.link}`))
+
+        axios.get('https://cdn.jsdelivr.net/npm/echo-js-feed/package.json')
+        .then(response => {
+            console.log('\n');
+            console.log(chalk.red(`Local version: ${package.version} vs Latest version: ${response.data.version}`))
+            if (package.version !== response.data.version) {
+                console.log(chalk.bgRed(`New Version: ${response.data.version}, available please update module.`));
             }
-        }
+        })
+        .then(() => {
+            if (rss.items) {
+                PrintFeed(rss.items)
+            }
+        })
+        .catch(error => {
+            console.log(error);
+        });
+
         
     });
     
