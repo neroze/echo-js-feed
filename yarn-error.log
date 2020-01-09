@@ -1,0 +1,34 @@
+Arguments: 
+  /home/zegal/.nvm/versions/node/v11.10.1/bin/node /usr/share/yarn/bin/yarn.js add rss-to-json
+
+PATH: 
+  /home/zegal/.nvm/versions/node/v11.10.1/bin:/snap/bin:/home/zegal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  11.10.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: read ECONNRESET
+      at TLSWrap.onStreamRead (internal/stream_base_commons.js:162:27)
+
+npm manifest: 
+  {
+    "name": "echoJSFeed",
+    "version": "1.0.0",
+    "description": "Read Feed from echoJS",
+    "main": "index.js",
+    "author": "Jumper <neerooze@gmail.com>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

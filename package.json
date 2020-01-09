@@ -1,0 +1,27 @@
+{
+  "name": "echo-js-feed",
+  "version": "1.0.0",
+  "description": "Read Feed from echoJS",
+  "main": "index.js",
+  "author": "Jumper <neerooze@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+      "echojs",
+      "feed",
+      "news",
+      "javascript",
+      "jumper"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/patorjk/figlet.js.git"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "clear": "^0.1.0",
+    "cli-spinner": "^0.2.10",
+    "figlet": "^1.2.4",
+    "rss-to-json": "^1.0.5",
+    "terminal-link": "^2.1.1"
+  }
+}
