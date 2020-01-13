@@ -20,7 +20,7 @@ yarn add global echo-js-feed
 Simple usage:
 
 ```js
-$ mkdir jsFeed && cd jsFeed and touch index.js
+$ mkdir jsFeed && cd jsFeed && touch index.js
 
 # copy and past following code
 # const feed = require('echo-js-feed')
