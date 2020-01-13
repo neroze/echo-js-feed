@@ -1,6 +1,6 @@
 {
   "name": "echo-js-feed",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Read Feed from echoJS",
   "main": "index.js",
   "author": "Jumper <neerooze@gmail.com>",
