@@ -20,8 +20,14 @@ yarn add global echo-js-feed
 Simple usage:
 
 ```js
-echo-js-feed
+$ mkdir jsFeed && cd jsFeed and touch index.js
 
+# copy and past following code
+# const feed = require('echo-js-feed')
+
+$ node ./index.js 
+
+# or you can add "node ./index.js" to alias
   _____     _               _ ____  
  | ____|___| |__   ___     | / ___| 
  |  _| / __| '_ \ / _ \ _  | \___ \ 

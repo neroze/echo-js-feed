@@ -27,7 +27,6 @@ const PrintFeed = (feeds) => {
     }
 }
 
-
 figlet('EchoJS', function(err, data) {
     if (err) {
         console.log('Something went wrong...');
