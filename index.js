@@ -1,8 +1,8 @@
-var Feed = require('rss-to-json');
-var figlet = require('figlet');
-var clear = require('clear')
+const Feed = require('rss-to-json');
+const figlet = require('figlet');
+const clear = require('clear')
 const terminalLink = require('terminal-link');
-var Spinner = require('cli-spinner').Spinner;
+const Spinner = require('cli-spinner').Spinner;
 const chalk = require('chalk');
 const axios = require('axios')
 
